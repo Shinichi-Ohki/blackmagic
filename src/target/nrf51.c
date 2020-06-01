@@ -311,10 +311,16 @@ static bool nrf51_cmd_read_deviceinfo(target *t, int argc, const char **argv)
 			tc_printf(t,"QF\n");
 			break;
 		case 0x2001:
+			tc_printf(t,"CH\n");
+			break;
+		case 0x2002:
 			tc_printf(t,"CI\n");
 			break;
 		case 0x2004:
 			tc_printf(t,"QIxx\n");
+			break;
+		case 0x2005:
+			tc_printf(t,"CK\n");
 			break;
 		default:
 			tc_printf(t,"Unknown (Code %X)\n",di.package);
